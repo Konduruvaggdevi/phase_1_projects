@@ -1,0 +1,80 @@
+//SampleReturn1.java
+
+public class SampleReturn1   
+{  
+    /* Method with an integer return type and no arguments */  
+    public int CompareNum()   
+    {   
+        int x = 3;  
+        int y = 8;  
+        System.out.println("x = " + x + "\ny = " + y);  
+        if(x>y)  
+            return x;  
+        else  
+            return y;  
+    }  
+      
+    /* Driver Code */  
+    public static void main(String ar[])   
+    {  
+        SampleReturn1 obj = new SampleReturn1();  
+        int result = obj.CompareNum();  
+        System.out.println("The greater number among x and y is: " + result);  
+    }  
+}  
+//SampleReturn2.java
+
+public class SampleReturn2   
+{  
+    /* Method with an integer return type and arguments */  
+    public int CompareNum(int x, int y)   
+    {   
+        System.out.println("x = " + x + "\ny = " + y);  
+        if(x>y)  
+            return x;  
+        else  
+            return y;  
+    }  
+      
+    /* Driver Code */  
+    public static void main(String ar[])   
+    {  
+        SampleReturn2 obj = new SampleReturn2();  
+        int result = obj.CompareNum(15,24);  
+        System.out.println("The greater number among x and y is: " + result);  
+    }  
+}  
+SampleReturn3.java
+
+
+class SumReturn  
+{  
+    private int a;  
+    public SumReturn(int i)  
+    {  
+        a = i;  
+    }  
+    /*The addition method returns a SumReturn object with adding 100 into it. */  
+    public SumReturn addition()  
+    {  
+        SumReturn result = new SumReturn(a + 100);  
+  
+        return result;  
+    }  
+    public void display()  
+    {  
+        System.out.println("Additon result: " + a);  
+    }  
+}  
+public class SampleReturn3  
+{  
+    /* Driver Code */  
+    public static void main(String[] args)  
+    {  
+        SumReturn obj1 = new SumReturn(50);  
+        SumReturn obj2;  
+        /* addition method returns a reference of SumReult class */  
+        obj2 = obj1.addition();  
+        obj2.display();  
+    }  
+}  
